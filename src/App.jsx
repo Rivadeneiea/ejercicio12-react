@@ -7,10 +7,11 @@ import NoticiaTrjeta from "./components/NoticiaTrjeta";
 function App() {
   const [noticias, setNoticias] = useState([]);
   const [categoria, setCategoria] = useState("top");
+  const [paises, setPaises] = useState("united states of america");
 
   useEffect(() => {
     consultarApi();
-  }, [categoria]);
+  }, [categoria, paises]);
 
   const consultarApi = async () => {
     try {
@@ -26,6 +27,9 @@ function App() {
   const selector = (e) => {
     setCategoria(e.target.value);
   };
+  const pais = (e) => {
+    setPaises(e.target.value);
+  };
 
   return (
     <>
@@ -39,8 +43,22 @@ function App() {
         </Form.Select>
       </section>
       <section>
+        <Form.Select aria-label="Default select example" onChange={pais}>
+          <option>Noticia paises</option>
+          <option value="united states of america">
+            united states of america
+          </option>
+          <option value="india">india</option>
+        </Form.Select>
+      </section>
+      <section>
         {noticias.map((noticia) => (
           <NoticiaTrjeta noticia={noticia} />
+        ))}
+      </section>
+      <section>
+        {paises.map((pais) => (
+          <NoticiaTrjeta propsPais={pais} />
         ))}
       </section>
     </>
