@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import NoticiaTrjeta from "./components/NoticiaTrjeta";
 
@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     consultarApi();
-  }, []);
+  }, [categoria]);
 
   const consultarApi = async () => {
     try {
@@ -29,6 +29,7 @@ function App() {
 
   return (
     <>
+      <h1>Noticias</h1>
       <section>
         <Form.Select aria-label="Default select example" onChange={selector}>
           <option>Open this select menu</option>
@@ -43,6 +44,7 @@ function App() {
         ))}
       </section>
     </>
-  );}
+  );
+}
 
 export default App;
