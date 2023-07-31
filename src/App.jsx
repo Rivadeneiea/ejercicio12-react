@@ -2,8 +2,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useEffect } from "react";
 import { Form } from "react-bootstrap";
+import NoticiaTrjeta from "./components/NoticiaTrjeta";
 
 function App() {
+  const [noticias, setNoticias] = useState([]);
+  const [categoria, setCategoria] = useState("top");
+
   useEffect(() => {
     consultarApi();
   }, []);
@@ -32,6 +36,9 @@ function App() {
           <option value="entertainment">entertainment</option>
           <option value="world">world</option>
         </Form.Select>
+      </section>
+      <section>
+        {} <NoticiaTrjeta />
       </section>
     </>
   );
