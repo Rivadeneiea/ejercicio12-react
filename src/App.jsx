@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useEffect } from "react";
+import { Form } from "react-bootstrap";
 
 function App() {
   useEffect(() => {
@@ -24,7 +25,14 @@ function App() {
 
   return (
     <>
-      <h1>hola mundo</h1>
+      <section>
+        <Form.Select aria-label="Default select example" onChange={selector}>
+          <option>Open this select menu</option>
+          <option value="top">top</option>
+          <option value="entertainment">entertainment</option>
+          <option value="world">world</option>
+        </Form.Select>
+      </section>
     </>
   );
 }
