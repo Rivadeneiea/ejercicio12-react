@@ -38,10 +38,11 @@ function App() {
         </Form.Select>
       </section>
       <section>
-        {} <NoticiaTrjeta />
+        {noticias.map((noticia) => (
+          <NoticiaTrjeta noticia={noticia} />
+        ))}
       </section>
     </>
-  );
-}
+  );}
 
 export default App;
