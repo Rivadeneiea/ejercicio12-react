@@ -7,7 +7,7 @@ import NoticiaTrjeta from "./components/NoticiaTrjeta";
 function App() {
   const [noticias, setNoticias] = useState([]);
   const [categoria, setCategoria] = useState("top");
-  const [paises, setPaises] = useState("united states of america");
+  const [paises, setPaises] = useState("ar");
 
   useEffect(() => {
     consultarApi();
@@ -16,7 +16,7 @@ function App() {
   const consultarApi = async () => {
     try {
       const respuesta = await fetch(
-        `https://newsdata.io/api/1/news?apikey=pub_26815e3379be8009c57f199f4a5743ab2d2bb&category=${categoria}`
+        `https://newsdata.io/api/1/news?apikey=pub_26815e3379be8009c57f199f4a5743ab2d2bb&category=${categoria}&country=${paises}&language=es`
       );
       const dato = await respuesta.json();
       setNoticias(dato.results);
@@ -45,20 +45,14 @@ function App() {
       <section>
         <Form.Select aria-label="Default select example" onChange={pais}>
           <option>Noticia paises</option>
-          <option value="united states of america">
-            united states of america
-          </option>
-          <option value="india">india</option>
+          <option value="ar">Argentina</option>
+          <option value="cl">Chile</option>
+          <option value="us">United states of america</option>
         </Form.Select>
       </section>
       <section>
         {noticias.map((noticia) => (
           <NoticiaTrjeta noticia={noticia} />
-        ))}
-      </section>
-      <section>
-        {paises.map((pais) => (
-          <NoticiaTrjeta propsPais={pais} />
         ))}
       </section>
     </>
