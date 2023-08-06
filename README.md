@@ -1,8 +1,12 @@
-# React + Vite
+# Ejercicio 12
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- En este proyecto se utilizo libreria de react bootstrap.
+- En el mismo se utilizo diferentes componentes y se agrego
+- ademas un selector adicional donde se podra seleccionar
+- el pais de referencia de esa noticia. Una vez seleccionados
+- los mismos hacemos el pedido a la api para luego mostrar por
+- pantalla la noticia requeriada.
 
-Currently, two official plugins are available:
+### Requisitos:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Modifica la web anterior permitiendo que el usuario seleccione el país y la categoría de las noticias que quiere ver.

@@ -55,7 +55,7 @@ function App() {
             aria-label="Default select example"
             onChange={pais}
           >
-            <option>Noticia paises</option>
+            <option>News Country</option>
             <option value="ar">Argentina</option>
             <option value="cl">Chile</option>
             <option value="us">United states of america</option>
