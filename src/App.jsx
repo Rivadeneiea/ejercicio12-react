@@ -3,7 +3,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import NoticiaTarjeta from "./components/NoticiaTarjeta";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 function App() {
   const [noticias, setNoticias] = useState([]);
