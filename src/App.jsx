@@ -21,8 +21,9 @@ function App() {
       );
       const dato = await respuesta.json();
       setNoticias(dato.results);
-      console.log(dato);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const selector = (e) => {
@@ -62,9 +63,9 @@ function App() {
           </Form.Select>
         </section>
       </div>
-      <section>
-        {noticias.map((noticia) => (
-          <NoticiaTarjeta noticia={noticia} />
+      <section className="container d-flex flex-wrap">
+        {noticias.map((noticia, index) => (
+          <NoticiaTarjeta noticia={noticia} key={index} />
         ))}
       </section>
       <Footer />
