@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
-import NoticiaTrjeta from "./components/NoticiaTrjeta";
+import NoticiaTarjeta from "./components/NoticiaTarjeta";
 import Footer from "./components/footer";
 
 function App() {
@@ -64,7 +64,7 @@ function App() {
       </div>
       <section>
         {noticias.map((noticia) => (
-          <NoticiaTrjeta noticia={noticia} />
+          <NoticiaTarjeta noticia={noticia} />
         ))}
       </section>
       <Footer />
