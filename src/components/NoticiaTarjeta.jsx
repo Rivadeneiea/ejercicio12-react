@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const NoticiaTrjeta = ({ noticia }) => {
+const NoticiaTarjeta = ({ noticia }) => {
   return (
     <Card
       style={{ width: "18rem" }}
@@ -16,4 +16,4 @@ const NoticiaTrjeta = ({ noticia }) => {
   );
 };
 
-export default NoticiaTrjeta;
+export default NoticiaTarjeta;
